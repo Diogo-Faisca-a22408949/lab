@@ -1,0 +1,80 @@
+[
+  {
+    "title": "HTML",
+    "image": "html5.svg",
+    "description": "Estrutura semântica das páginas web.",
+    "rating": 5
+  },
+  {
+    "title": "CSS",
+    "image": "css3.svg",
+    "description": "Estilização e layout das páginas.",
+    "rating": 4
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwind.svg",
+    "description": "Framework CSS utilitário ultra rápido.",
+    "rating": 5
+  },
+  {
+    "title": "JavaScript",
+    "image": "javascript.svg",
+    "description": "Linguagem que dá vida às páginas web.",
+    "rating": 5
+  },
+  {
+    "title": "TypeScript",
+    "image": "typescript.svg",
+    "description": "JavaScript com tipos – mais segurança!",
+    "rating": 5
+  },
+  {
+    "title": "JSON",
+    "image": "json.svg",
+    "description": "Formato leve para troca de dados.",
+    "rating": 4
+  },
+  {
+    "title": "API RESTful",
+    "image": "rest-api.svg",
+    "description": "Arquitetura para comunicação entre sistemas.",
+    "rating": 5
+  },
+  {
+    "title": "Swagger",
+    "image": "swagger.svg",
+    "description": "Documentação interativa de APIs.",
+    "rating": 4
+  },
+  {
+    "title": "GitHub",
+    "image": "github.svg",
+    "description": "Plataforma de controle de versão e colaboração.",
+    "rating": 5
+  },
+  {
+    "title": "GitHub Pages",
+    "image": "github.svg",
+    "description": "Hospedagem gratuita de sites estáticos.",
+    "rating": 5
+  },
+  {
+    "title": "React.js",
+    "image": "react.svg",
+    "description": "Biblioteca para interfaces reativas.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.svg",
+    "description": "Framework React full-stack com SSR e SSG.",
+    "rating": 5
+  },
+  {
+    "title": "Vercel",
+    "image": "vercel.svg",
+    "description": "Deploy instantâneo e otimizado para Next.js.",
+    "rating": 5
+  }
+]
