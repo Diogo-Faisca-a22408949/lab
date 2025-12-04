@@ -1,10 +1,8 @@
+// app/tecnologias/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import tecnologias from '@/app/data/tecnologias.json';
-
-// Como o ficheiro é JSON puro, o Next.js já devolve um array de objetos
-// Não é necessário JSON.parse() quando usas import direto
-// (o Next.js faz isso automaticamente)
+import TecnologiaCard from '@/components/TecnologiaCard/TecnologiaCard';   // ← caminho corrigido e simplificado
 
 export default function TecnologiasPage() {
   return (
@@ -13,7 +11,7 @@ export default function TecnologiasPage() {
       <div className="max-w-7xl mx-auto mb-10">
         <Link
           href="/"
-          className="inline-block text-white hover:text-cyan-400 transition-colors"
+          className="inline-block text-white hover:text-cyan-400 transition-colors font-medium"
         >
           ← Voltar à Home
         </Link>
@@ -24,46 +22,14 @@ export default function TecnologiasPage() {
           Tecnologias Exploradas
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {tecnologias.map((tech, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300"
-            >
-              {/* Imagem */}
-              <div className="bg-gray-100 p-8 flex justify-center items-center">
-                <Image
-                  src={`/tecnologias/${tech.image}`}
-                  alt={tech.title}
-                  width={120}
-                  height={120}
-                  className="object-contain drop-shadow-lg"
-                />
-              </div>
-
-              {/* Conteúdo */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  {tech.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{tech.description}</p>
-
-                {/* Rating com estrelas */}
-                <div className="flex items-center gap-1">
-                  <span className="text-sm text-gray-500 mr-2">Minha nota:</span>
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`text-2xl ${
-                        i < tech.rating ? 'text-yellow-500' : 'text-gray-300'
-                      }`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+        {/* Grid responsivo com os novos cards simples */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-10 justify-center">
+          {tecnologias.map((tech) => (
+            <TecnologiaCard
+              key={tech.title}           // ← key mais segura (title é único)
+              title={tech.title}
+              image={tech.image}
+            />
           ))}
         </div>
       </div>

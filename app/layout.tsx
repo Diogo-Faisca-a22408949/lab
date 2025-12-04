@@ -56,6 +56,11 @@ export default function RootLayout({
                   Tecnologias
                 </Link>
               </li>
+              <li>
+                <Link href="/projetos" className="hover:text-cyan-300 transition">
+                  Projetos
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
